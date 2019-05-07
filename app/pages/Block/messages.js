@@ -49,4 +49,8 @@ export default defineMessages({
     id: `${scope}.transaction`,
     defaultMessage: '交易',
   },
+  noTransaction: {
+    id: `${scope}.noTransaction`,
+    defaultMessage: '暂无交易',
+  },
 });

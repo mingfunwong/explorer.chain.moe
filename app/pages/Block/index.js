@@ -97,7 +97,7 @@ export class Block extends React.Component {
               <Card>
                 <Card.Header>
                   <Card.Title>
-                    <FormattedMessage {...messages.actions} />
+                    <FormattedMessage {...messages.transaction} />
                   </Card.Title>
                 </Card.Header>
                 <Table
@@ -124,6 +124,12 @@ export class Block extends React.Component {
                     </Table.Row>
                   </Table.Header>
                   <Table.Body>
+                    {
+                      transactions.length === 0 &&
+                      <Table.Row>
+                        <th colSpan={4} className='text-center'><FormattedMessage {...messages.noTransaction} /></th>
+                      </Table.Row>
+                    }
                     {transactions.map((act, index) => (
                       <Table.Row key={index}>
                         <Table.Col>
@@ -146,7 +152,7 @@ export class Block extends React.Component {
                 </Table>
               </Card>
             </React.Fragment>
-        )}
+          )}
       </BasicLayout>
     );
   }

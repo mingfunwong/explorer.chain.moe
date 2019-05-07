@@ -27,6 +27,7 @@
   "app.containers.Block.hash": "Hash",
   "app.containers.Block.notFoundBlock": "Not Found Block",
   "app.containers.Block.transaction": "TX",
+  "app.containers.Block.noTransaction": "No TX",
   "app.containers.Bps.account": "Account",
   "app.containers.Bps.bp": "Producer",
   "app.containers.Bps.homePage": "Home Page",

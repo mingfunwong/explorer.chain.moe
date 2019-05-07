@@ -27,6 +27,7 @@
   "app.containers.Block.hash": "ハッシュ",
   "app.containers.Block.notFoundBlock": "ブロックが見つからない",
   "app.containers.Block.transaction": "ハッシュ",
+  "app.containers.Block.noTransaction": "アクションはありません",
   "app.containers.Bps.account": "アカウント",
   "app.containers.Bps.bp": "プロデューサー",
   "app.containers.Bps.homePage": "HP",

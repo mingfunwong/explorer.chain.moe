@@ -27,6 +27,7 @@
   "app.containers.Block.hash": "哈希",
   "app.containers.Block.notFoundBlock": "找不到区块",
   "app.containers.Block.transaction": "交易",
+  "app.containers.Block.noTransaction": "暂无交易",
   "app.containers.Bps.account": "节点账号",
   "app.containers.Bps.bp": "超级节点",
   "app.containers.Bps.homePage": "网址",
