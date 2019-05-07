@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 23.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+<!-- Generator: Adobe Illustrator 23.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="text" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 2027.7 364" style="enable-background:new 0 0 2027.7 364;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:#467FCF;}
@@ -27,6 +27,8 @@
 		</g>
 	</g>
 </g>
-<rect x="507.3" y="69.1" class="st2" width="2292.6" height="281.9"/>
-<text transform="matrix(1 0 0 1 507.274 265.4623)"><tspan x="0" y="0" class="st3 st4 st5">Chain</tspan><tspan x="750.1" y="0" class="st3 st4 st6"> </tspan><tspan x="858.1" y="0" class="st3 st4 st5">Moe</tspan></text>
+<rect id="text_2_" x="507.3" y="69.1" class="st2" width="2292.6" height="281.9"/>
+<text transform="matrix(1 0 0 1 507.274 265.4623)" class="st3 st4 st5">Chain</text>
+<text transform="matrix(1 0 0 1 1257.374 265.4623)" class="st3 st4 st6"> </text>
+<text transform="matrix(1 0 0 1 1365.374 265.4623)" class="st3 st4 st5">Moe</text>
 </svg>
