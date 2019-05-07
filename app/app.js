@@ -14,7 +14,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'connected-react-router/immutable';
 import history from 'utils/history';
-import 'sanitize.css/sanitize.css';
+// import 'sanitize.css/sanitize.css';
 
 // Import root app
 import App from 'containers/App';
@@ -28,6 +28,7 @@ import '!file-loader?name=[name].[ext]!./images/favicon.ico';
 import 'file-loader?name=.htaccess!./.htaccess';
 /* eslint-enable import/no-unresolved, import/extensions */
 
+import { CookiesProvider } from 'react-cookie';
 import configureStore from './configureStore';
 
 // Import i18n messages
@@ -42,9 +43,11 @@ const render = messages => {
   ReactDOM.render(
     <Provider store={store}>
       <LanguageProvider messages={messages}>
-        <ConnectedRouter history={history}>
-          <App />
-        </ConnectedRouter>
+        <CookiesProvider>
+          <ConnectedRouter history={history}>
+            <App />
+          </ConnectedRouter>
+        </CookiesProvider>
       </LanguageProvider>
     </Provider>,
     MOUNT_NODE,

@@ -8,36 +8,46 @@
  *   You CANNOT use import/export in this file.
  */
 const addLocaleData = require('react-intl').addLocaleData; //eslint-disable-line
+const zhLocaleData = require('react-intl/locale-data/zh');
 const enLocaleData = require('react-intl/locale-data/en');
+const jaLocaleData = require('react-intl/locale-data/ja');
 
+const zhTranslationMessages = require('./translations/zh.json');
 const enTranslationMessages = require('./translations/en.json');
+const jaTranslationMessages = require('./translations/ja.json');
 
+addLocaleData(zhLocaleData);
 addLocaleData(enLocaleData);
+addLocaleData(jaLocaleData);
 
-const DEFAULT_LOCALE = 'en';
+const DEFAULT_LOCALE = 'zh';
 
 // prettier-ignore
 const appLocales = [
+  'zh',
   'en',
+  'ja',
 ];
 
 const formatTranslationMessages = (locale, messages) => {
   const defaultFormattedMessages =
     locale !== DEFAULT_LOCALE
-      ? formatTranslationMessages(DEFAULT_LOCALE, enTranslationMessages)
+      ? formatTranslationMessages(DEFAULT_LOCALE, zhTranslationMessages)
       : {};
-  const flattenFormattedMessages = (formattedMessages, key) => {
+  const flattzhFormattedMessages = (formattedMessages, key) => {
     const formattedMessage =
       !messages[key] && locale !== DEFAULT_LOCALE
         ? defaultFormattedMessages[key]
         : messages[key];
     return Object.assign(formattedMessages, { [key]: formattedMessage });
   };
-  return Object.keys(messages).reduce(flattenFormattedMessages, {});
+  return Object.keys(messages).reduce(flattzhFormattedMessages, {});
 };
 
 const translationMessages = {
+  zh: formatTranslationMessages('zh', zhTranslationMessages),
   en: formatTranslationMessages('en', enTranslationMessages),
+  ja: formatTranslationMessages('ja', jaTranslationMessages),
 };
 
 exports.appLocales = appLocales;

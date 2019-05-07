@@ -1,30 +1,38 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
-  html,
-  body {
-    height: 100%;
-    width: 100%;
+  .fa, .far, .fas {
+    font-family: "Font Awesome 5 Free" !important;
   }
-
-  body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  .fab {
+    font-family: "Font Awesome 5 Brands" !important;
   }
-
-  body.fontLoaded {
-    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  .header-brand-img {
+    height: 2.3rem;
   }
-
-  #app {
-    background-color: #fafafa;
-    min-height: 100%;
-    min-width: 100%;
+  .header .avatar{
+    border-radius: initial;
+    background-size: contain;
+    background-color: initial;
   }
-
-  p,
-  label {
-    font-family: Georgia, Times, 'Times New Roman', serif;
-    line-height: 1.5em;
+  .single-row{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .header .badge{
+    position: relative;
+    top: -0.1rem;
+  }
+  .header .dropdown-item[href='${window.location.protocol}//${
+  window.location.host
+}'] {
+    background: #efefef;
+  }
+  .avatar.sm{
+    width: 1.5rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
   }
 `;
 

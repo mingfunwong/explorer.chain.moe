@@ -42,7 +42,9 @@
     "test": "cross-env NODE_ENV=test jest --coverage",
     "test:watch": "cross-env NODE_ENV=test jest --watchAll",
     "coveralls": "cat ./coverage/lcov.info | coveralls",
-    "prettify": "prettier --write"
+    "prettify": "prettier --write",
+    "predeploy": "npm run build && cp -f ./design/CNAME ./build/CNAME",
+    "deploy": "gh-pages -d build"
   },
   "lint-staged": {
     "*.js": [
@@ -54,18 +56,21 @@
       "git add --force"
     ]
   },
-  "pre-commit": "lint:staged",
+  // "pre-commit": "lint:staged",
   "resolutions": {
     "babel-core": "7.0.0-bridge.0"
   },
   "dependencies": {
     "@babel/polyfill": "7.0.0",
+    "axios": "^0.18.0",
     "chalk": "2.4.1",
     "compression": "1.7.3",
     "connected-react-router": "4.5.0",
     "cross-env": "5.2.0",
+    "eosjs-api": "^7.0.4",
     "express": "4.16.4",
     "fontfaceobserver": "2.0.13",
+    "gh-pages": "^2.0.1",
     "history": "4.7.2",
     "hoist-non-react-statics": "3.0.1",
     "immutable": "3.8.2",
@@ -73,21 +78,26 @@
     "invariant": "2.2.4",
     "ip": "1.1.5",
     "loadable-components": "2.2.3",
-    "lodash": "4.17.11",
+    "lodash": "^4.17.11",
     "minimist": "1.2.0",
     "prop-types": "15.6.2",
     "react": "16.6.0",
+    "react-c3js": "^0.1.20",
+    "react-content-loader": "^4.2.1",
+    "react-cookie": "^3.1.2",
     "react-dom": "16.6.0",
     "react-helmet": "5.2.0",
     "react-intl": "2.7.2",
     "react-redux": "5.0.7",
     "react-router-dom": "4.3.1",
     "redux": "4.0.1",
+    "redux-actions": "^2.6.5",
     "redux-immutable": "4.0.0",
     "redux-saga": "0.16.2",
     "reselect": "4.0.0",
     "sanitize.css": "4.1.0",
     "styled-components": "4.0.2",
+    "tabler-react": "^1.28.0",
     "warning": "4.0.2"
   },
   "devDependencies": {
