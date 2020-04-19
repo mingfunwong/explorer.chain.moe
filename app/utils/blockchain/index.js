@@ -68,9 +68,6 @@ chain.setChain('eos', {
   symbol: 'EOS',
   logo: eosLogo,
   endpoints: [
-    'https://proxy.eosnode.tools',
-    'https://api.cypherglass.com/',
-    'http://api.eosnewyork.io',
     'https://api1.eosasia.one',
     'https://eos.greymass.com',
     'https://history.cryptolions.io',
@@ -114,12 +111,10 @@ chain.setChain('fibos', {
   logo: fibosLogo,
   endpoints: [
     'https://api.fibos.rocks',
-    'https://rpc-mainnet.fibos123.com',
-    'https://rpc-mainnet.fibscan.io',
   ],
   bindPath: ['fo'],
   extend: {
-    fibosRocksStatsUrl: 'https://explorer.fibos.rocks/api/stats',
+    // fibosRocksStatsUrl: 'https://api.see.fo/stats',
   },
 });
 
@@ -143,7 +138,7 @@ chain.setChain('enumivo', {
   bindPath: ['enu'],
   extend: {
     contractEosio: 'enumivo',
-    enumivoExplorerStatsUrl: 'https://enumivo.qsx.io/api/v2/stats',
+    // enumivoExplorerStatsUrl: 'https://api.enumivo.world/stats',
   },
 });
 
@@ -158,14 +153,14 @@ chain.setChain('bos', {
 });
 
 // bos testnet
-chain.setChain('bosTest', {
-  name: 'BOS Test',
-  netType: 'Testnet',
-  symbol: 'BOS',
-  logo: bosLogo,
-  endpoints: ['https://bostest.api.blockgo.vip'],
-  bindPath: ['bos-test'],
-});
+// chain.setChain('bosTest', {
+//   name: 'BOS Test',
+//   netType: 'Testnet',
+//   symbol: 'BOS',
+//   logo: bosLogo,
+//   endpoints: ['https://bostest.api.blockgo.vip'],
+//   bindPath: ['bos-test'],
+// });
 
 // meet
 chain.setChain('meet', {
