@@ -101,7 +101,7 @@ export class BasicLayout extends React.Component {
       {
         value: <FormattedMessage {...messages.dashboards} />,
         to: `/${current.bindPath}`,
-        icon: 'home',
+        icon: ' fa fa-home',
         LinkComponent: NavLink,
         useExact: true,
       },
@@ -121,7 +121,7 @@ export class BasicLayout extends React.Component {
       nav: (
         <React.Fragment>
           <a
-            href="javascript:;"
+            href="#"
             onClick={() => this.changeLanguage('en')}
             className={this.state.language === 'en' ? 'font-weight-bold' : ''}
           >
@@ -129,7 +129,7 @@ export class BasicLayout extends React.Component {
           </a>
           &nbsp;|&nbsp;
           <a
-            href="javascript:;"
+            href="#"
             onClick={() => this.changeLanguage('zh')}
             className={this.state.language === 'zh' ? 'font-weight-bold' : ''}
           >
@@ -137,7 +137,7 @@ export class BasicLayout extends React.Component {
           </a>
           &nbsp;|&nbsp;
           <a
-            href="javascript:;"
+            href="#"
             onClick={() => this.changeLanguage('ja')}
             className={this.state.language === 'ja' ? 'font-weight-bold' : ''}
           >

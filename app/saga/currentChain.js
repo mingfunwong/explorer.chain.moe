@@ -20,7 +20,7 @@ export function* getChainInfo() {
     }
     yield put(actionTypes.chainInfoSuccess(info));
   } catch (err) {
-    console.error({ err });
+    // console.error({ err });
     yield put(actionTypes.chainInfoFailure(err));
   }
 }
@@ -36,7 +36,7 @@ export function* getChainStats() {
     );
     yield put(actionTypes.chainStatsSuccess(stats));
   } catch (err) {
-    console.error({ err });
+    // console.error({ err });
     yield put(actionTypes.chainStatsFailure(err));
   }
 }
@@ -56,7 +56,7 @@ export function* getChainGlobal() {
     const ramPercent = `${ramUsed} / ${ramMax}`;
     yield put(actionTypes.chainGlobalSuccess({ ...global, ramPercent }));
   } catch (err) {
-    console.error({ err });
+    // console.error({ err });
     yield put(actionTypes.chainGlobalFailure(err));
   }
 }
@@ -76,7 +76,7 @@ export function* getChainRammarket() {
       (1024 * parseFloat(res.quote.balance)) / parseFloat(res.base.balance);
     yield put(actionTypes.chainRammarketSuccess({ ...rammarket, kbPrice }));
   } catch (err) {
-    console.error({ err });
+    // console.error({ err });
     yield put(actionTypes.chainRammarketFailure(err));
   }
 }
@@ -88,7 +88,7 @@ export function* getChianBlock(chainInfo) {
     yield put(actionTypes.chainBlockSuccess(block));
     yield call(getChianTxs, block);
   } catch (err) {
-    console.error({ err });
+    // console.error({ err });
     yield put(actionTypes.chainBlockFailure(err));
   }
 }
@@ -112,7 +112,7 @@ export function* getChianInfoBlock(chainInfo) {
     yield put(actionTypes.chainBlocksPush(blockTypes));
     yield call(getChianTxs, block);
   } catch (err) {
-    console.error({ err });
+    // console.error({ err });
     yield put(actionTypes.chainInfoBlockFailure(err));
   }
 }
@@ -139,7 +139,7 @@ export function* getChianTxs(block) {
       yield delay(500 / txs.length);
     }
   } catch (err) {
-    console.error({ err });
+    // console.error({ err });
     yield put(actionTypes.chianTxsFailure(err));
   }
 }
@@ -162,7 +162,7 @@ export function* getHistoryBlockFibos() {
       yield put(actionTypes.chainTxsPush(txs[index]));
     }
   } catch (err) {
-    console.error({ err });
+    // console.error({ err });
     yield put(actionTypes.historyBlockFibosFailure(err));
   }
 }
@@ -185,7 +185,7 @@ export function* getHistoryBlockEnumivo() {
       yield put(actionTypes.chainTxsPush(txs[index]));
     }
   } catch (err) {
-    console.error({ err });
+    // console.error({ err });
     yield put(actionTypes.historyBlockEnumivoFailure(err));
   }
 }
@@ -225,7 +225,7 @@ export function* getChainProducers() {
     // console.log(newProducers.length, oldProducers.rows.length, more)
     yield put(actionTypes.chainProducersSuccess({ rows: newProducers, more }));
   } catch (err) {
-    console.error({ err });
+    // console.error({ err });
     yield put(actionTypes.chainProducersFailure(err));
   }
 }
@@ -236,7 +236,7 @@ export function* getChainAccount(request) {
     const account = yield call(current.chain.getAccount, accountName);
     yield put(actionTypes.chainAccountSuccess(account));
   } catch (err) {
-    console.error({ err });
+    // console.error({ err });
     yield put(actionTypes.chainAccountFailure(err));
   }
 }
@@ -252,7 +252,7 @@ export function* getChainAccountFromTable(request) {
     });
     yield put(actionTypes.chainAccountFromTableSuccess(table));
   } catch (err) {
-    console.error({ err });
+    // console.error({ err });
     yield put(actionTypes.chainAccountFromTableFailure(err));
   }
 }
@@ -263,7 +263,7 @@ export function* getChainAbi(request) {
     const abi = yield call(current.chain.getAbi, accountName);
     yield put(actionTypes.chainAbiSuccess(abi));
   } catch (err) {
-    console.error({ err });
+    // console.error({ err });
     yield put(actionTypes.chainAbiFailure(err));
   }
 }
@@ -277,7 +277,7 @@ export function* getChainRawCodeAndAbi(request) {
     );
     yield put(actionTypes.chainRawCodeAndAbiSuccess(rawCodeAndAbi));
   } catch (err) {
-    console.error({ err });
+    // console.error({ err });
     yield put(actionTypes.chainRawCodeAndAbiFailure(err));
   }
 }
@@ -302,7 +302,7 @@ export function* getChainTransaction(request) {
 
     yield put(actionTypes.chainTransactionSuccess(tx));
   } catch (err) {
-    console.error({ err });
+    // console.error({ err });
     yield put(actionTypes.chainTransactionFailure(err));
   }
 }
@@ -351,7 +351,7 @@ export function* getChainActions(request) {
       }),
     );
   } catch (err) {
-    console.error({ err });
+    // console.error({ err });
     var { chainActions } = yield select(makeSelectCurrentChain());
     yield put(actionTypes.chainActionsFailure(chainActions.payload));
   }
