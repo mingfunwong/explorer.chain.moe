@@ -81,8 +81,8 @@ export class Dashboards extends React.Component {
       {
         header: <FormattedMessage {...messages.ramPrice} />,
         content: `${
-          chainRammarket.usable ? chainRammarket.payload.kbPrice.toFixed(4) : 0
-        } ${current.symbol} / KB`,
+          chainRammarket.usable ? chainRammarket.payload.mbPrice.toFixed(2) : 0
+        } ${current.symbol} / MB`,
       },
       {
         header: <FormattedMessage {...messages.ramUsed} />,

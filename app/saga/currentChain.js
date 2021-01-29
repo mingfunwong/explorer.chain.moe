@@ -74,7 +74,9 @@ export function* getChainRammarket() {
     // http://t.cn/EIJZUjB
     const kbPrice =
       (1024 * parseFloat(res.quote.balance)) / parseFloat(res.base.balance);
-    yield put(actionTypes.chainRammarketSuccess({ ...rammarket, kbPrice }));
+    const mbPrice =
+        (1024 * 1024 * parseFloat(res.quote.balance)) / parseFloat(res.base.balance);
+    yield put(actionTypes.chainRammarketSuccess({ ...rammarket, kbPrice, mbPrice }));
   } catch (err) {
     // console.error({ err });
     yield put(actionTypes.chainRammarketFailure(err));

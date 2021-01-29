@@ -19,7 +19,7 @@ const LatestBlocks = props => (
       striped
       responsive
       className=""
-      style={{ tableLayout: 'fixed' }}
+      style={{ tableLayout: 'fixed', overflow: 'hidden' }}
     >
       <Table.Header>
         <Table.Row>
