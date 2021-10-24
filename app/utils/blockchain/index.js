@@ -42,7 +42,7 @@ function GennerateChain() {
           contractEosioToken: 'eosio.token',
         },
       },
-      chainType,
+      chainType
     );
     chain.chain = EosApi({ httpEndpoint: chain.endpoints[0] });
     listObject[chainName] = chain;
@@ -67,12 +67,7 @@ chain.setChain('eos', {
   netType: 'Mainnet',
   symbol: 'EOS',
   logo: eosLogo,
-  endpoints: [
-    'https://api1.eosasia.one',
-    'https://eos.greymass.com',
-    'https://history.cryptolions.io',
-    'https://eosx-apigw.eosx.io',
-  ],
+  endpoints: ['https://eos.greymass.com', 'https://history.cryptolions.io', 'https://eosx-apigw.eosx.io'],
   bindPath: ['eos'],
   extend: {
     coinmarketcapEosUrl: 'https://api.coinmarketcap.com/v2/ticker/1765/',
@@ -95,11 +90,7 @@ chain.setChain('eosJungle', {
   netType: 'Testnet',
   symbol: 'EOS',
   logo: eosJungleLogo,
-  endpoints: [
-    'https://api.jungle.alohaeos.com',
-    'https://junglehistory.cryptolions.io:4433',
-    'https://jungle2.cryptolions.io',
-  ],
+  endpoints: ['http://jungle2.cryptolions.io'],
   bindPath: ['eos-jungle'],
 });
 
@@ -109,9 +100,7 @@ chain.setChain('fibos', {
   netType: 'Mainnet',
   symbol: 'FO',
   logo: fibosLogo,
-  endpoints: [
-    'https://api.fibos.rocks',
-  ],
+  endpoints: ['https://fo.blockeden.cn'],
   bindPath: ['fo'],
   extend: {
     // fibosRocksStatsUrl: 'https://api.see.fo/stats',
@@ -134,7 +123,7 @@ chain.setChain('enumivo', {
   netType: 'Mainnet',
   symbol: 'ENU',
   logo: enumivoLogo,
-  endpoints: ['https://enu.qsx.io'],
+  endpoints: ['https://enu.blockeden.cn'],
   bindPath: ['enu'],
   extend: {
     contractEosio: 'enumivo',
