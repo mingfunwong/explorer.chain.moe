@@ -42,7 +42,7 @@ function GennerateChain() {
           contractEosioToken: 'eosio.token',
         },
       },
-      chainType
+      chainType,
     );
     chain.chain = EosApi({ httpEndpoint: chain.endpoints[0] });
     listObject[chainName] = chain;
@@ -50,7 +50,7 @@ function GennerateChain() {
     if (!listObject.current) {
       setCurrent(chainName);
     }
-    chain.bindPath.map(h => h === path && setCurrent(chainName));
+    chain.bindPath.map((h) => h === path && setCurrent(chainName));
   }
 
   this.setCurrent = setCurrent;
@@ -67,7 +67,11 @@ chain.setChain('eos', {
   netType: 'Mainnet',
   symbol: 'EOS',
   logo: eosLogo,
-  endpoints: ['https://eos.greymass.com', 'https://history.cryptolions.io', 'https://eosx-apigw.eosx.io'],
+  endpoints: [
+    'https://eos.greymass.com',
+    'https://history.cryptolions.io',
+    'https://eosx-apigw.eosx.io',
+  ],
   bindPath: ['eos'],
   extend: {
     coinmarketcapEosUrl: 'https://api.coinmarketcap.com/v2/ticker/1765/',
@@ -100,7 +104,7 @@ chain.setChain('fibos', {
   netType: 'Mainnet',
   symbol: 'FO',
   logo: fibosLogo,
-  endpoints: ['https://fo.blockeden.cn'],
+  endpoints: ['https://to-rpc.fibos.io'],
   bindPath: ['fo'],
   extend: {
     // fibosRocksStatsUrl: 'https://api.see.fo/stats',
