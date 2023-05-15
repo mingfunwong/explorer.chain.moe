@@ -107,7 +107,7 @@ export default function AccountPage({
     <section className="container grid items-center gap-6 pb-8 pt-6 md:py-10">
       <div className="items-center space-y-2">
         <h2 className="inline-block text-3xl font-bold tracking-tight">
-          EOS Account
+          {currentChain.name} Account
         </h2>
       </div>
       <Card>
