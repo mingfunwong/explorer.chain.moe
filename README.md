@@ -1,23 +1,33 @@
-# next-template
+# Explorer Chain Moe
 
-A Next.js 13 template for building apps with Radix UI and Tailwind CSS.
+Open source Blockchain Explorer.
+https://explorer.chain.moe/
 
-## Usage
+## Support blockchain
 
-```bash
-npx create-next-app -e https://github.com/shadcn/next-template
+- [EOS](https://explorer.chain.moe/eos/)
+- [FIBOS](https://explorer.chain.moe/fo/)
+- [FIO](https://explorer.chain.moe/fio/)
+- [Proton](https://explorer.chain.moe/proton/)
+- [Force](https://explorer.chain.moe/force/)
+- [Libre](https://explorer.chain.moe/libre/)
+- [Telos](https://explorer.chain.moe/telos/)
+- [Wax](https://explorer.chain.moe/wax/)
+
+## Install
+
+```
+git clone https://github.com/chain-moe/explorer.chain.moe.git
+cd explorer.chain.moe
+yarn
 ```
 
-## Features
+## Run
 
-- Radix UI Primitives
-- Tailwind CSS
-- Fonts with `next/font`
-- Icons from [Lucide](https://lucide.dev)
-- Dark mode with `next-themes`
-- Automatic import sorting with `@ianvs/prettier-plugin-sort-imports`
-- Tailwind CSS class sorting, merging and linting.
+```
+yarn dev
+```
 
 ## License
 
-Licensed under the [MIT license](https://github.com/shadcn/ui/blob/main/LICENSE.md).
+This project is licensed under the Apache license, Copyright (c) Mingfun Wong.
