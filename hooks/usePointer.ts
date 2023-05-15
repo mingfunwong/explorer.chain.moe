@@ -20,7 +20,7 @@ export const usePointer = () => {
 
   useEffect(() => {
     const pointersStatus = new PointersStatus()
-    pointersStatus.run(producerJson)
+    pointersStatus.run(producerJson || [])
 
     async function fetchData() {
       const points = pointersStatus.points
