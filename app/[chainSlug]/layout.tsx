@@ -9,6 +9,7 @@ import { useCurrentChian } from "@/hooks/useCurrentChian"
 import { SiteFooter } from "@/components/site-footer"
 import { SiteHeader } from "@/components/site-header"
 import { ThemeProvider } from "@/components/theme-provider"
+import { TopLoader } from "@/components/top-loader"
 
 interface RootLayoutProps {
   children: React.ReactNode
@@ -16,6 +17,7 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   const currentChain = useCurrentChian() || defultChain
+
   return (
     <>
       <html lang="en" suppressHydrationWarning>
@@ -31,6 +33,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           )}
         >
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+            <TopLoader />
             <div className="relative flex min-h-screen flex-col">
               <SiteHeader />
               <div className="flex-1">{children}</div>

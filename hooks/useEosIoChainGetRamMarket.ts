@@ -1,14 +1,17 @@
 "use client"
 
 import { IEosIoChainGetRamMarketRow } from "@/types/IEosIoChainGetRamMarket"
+import { defultChain } from "@/config/chains"
 
+import { useCurrentChian } from "./useCurrentChian"
 import { useEosIoChainGetTableRows } from "./useEosIoChainGetTableRows"
 
 export const useEosIoChainGetRamMarket = () => {
+  const currentChain = useCurrentChian() || defultChain
   const body = {
+    scope: currentChain.contract,
+    code: currentChain.contract,
     json: true,
-    code: "eosio",
-    scope: "eosio",
     table: "rammarket",
     limit: 1,
   }

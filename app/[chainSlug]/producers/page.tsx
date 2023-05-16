@@ -9,7 +9,6 @@ import { defultChain } from "@/config/chains"
 import { useCurrentChian } from "@/hooks/useCurrentChian"
 import { useProducers } from "@/hooks/useProducers"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { DataTable } from "@/components/ui/data-table"
 
 export default function ProducersPage() {
@@ -43,12 +42,16 @@ export default function ProducersPage() {
                 {row.original.owner.slice(0, 2).toUpperCase()}
               </AvatarFallback>
             </Avatar>
-            <Link
-              href={`/${currentChain.slug}/account/${row.original.owner}`}
-              className="ml-4 border-b border-b-gray-800"
-            >
-              {row.original.owner}
-            </Link>
+            <div className="ml-4">
+              <div className="text-base">{row.original.candidate_name}</div>
+
+              <Link
+                href={`/${currentChain.slug}/account/${row.original.owner}`}
+                className="border-gray-500 text-gray-500 hover:border-b"
+              >
+                {row.original.owner}
+              </Link>
+            </div>
           </div>
         )
       },
@@ -97,14 +100,12 @@ export default function ProducersPage() {
 
   return (
     <section className="container grid items-center gap-6 pb-8 pt-6 md:py-10">
-      <Card className="col-span-3">
-        <CardHeader>
-          <CardTitle>Producers</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <DataTable columns={columns} data={bpList} />
-        </CardContent>
-      </Card>
+      <div className="items-center space-y-2">
+        <h2 className="inline-block text-3xl font-bold tracking-tight">
+          Producers
+        </h2>
+      </div>
+      <DataTable columns={columns} data={bpList} />
     </section>
   )
 }

@@ -1,5 +1,6 @@
 import { Chain } from "@/types/chain"
 
+import { enumivoMainnet } from "./enumivo-mainnet"
 import { eosMainnet } from "./eos-mainnet"
 import { eosTestJungle4 } from "./eos-testnet-jungle4"
 import { fibosMainnet } from "./fibos-mainnet"
@@ -29,6 +30,7 @@ export const publicChians: Chain[] = [
   telosTestnet,
   waxMainnet,
   waxTestnet,
+  enumivoMainnet,
 ]
 export const privateChians: Chain[] = [privateOwnnet]
 export const chians: Chain[] = [...publicChians, ...privateChians]

@@ -13,6 +13,7 @@ https://explorer.chain.moe/
 - [Libre](https://explorer.chain.moe/libre/)
 - [Telos](https://explorer.chain.moe/telos/)
 - [Wax](https://explorer.chain.moe/wax/)
+- [Enumivo](https://explorer.chain.moe/enu/)
 
 ## Install
 

@@ -1,14 +1,19 @@
 "use client"
 
+import { defultChain } from "@/config/chains"
+
 import { IEosIoChainGetGlobal } from "../types"
+import { useCurrentChian } from "./useCurrentChian"
 import { useEosIoChainGetTableRows } from "./useEosIoChainGetTableRows"
 
 export const useEosIoChainGetGlobal = () => {
+  const currentChain = useCurrentChian() || defultChain
+
   const body = {
-    code: "eosio",
+    code: currentChain.contract,
+    scope: currentChain.contract,
     json: true,
     limit: 1,
-    scope: "eosio",
     table: "global",
   }
 

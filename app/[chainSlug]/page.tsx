@@ -4,7 +4,6 @@ import { useEffect, useRef, useState } from "react"
 import Link from "next/link"
 import { formatNumber } from "@/utils"
 import { useAutoAnimate } from "@formkit/auto-animate/react"
-import { ColumnDef } from "@tanstack/react-table"
 import { ChevronsUp, Database, MemoryStick, User } from "lucide-react"
 import { useCountUp } from "react-countup"
 

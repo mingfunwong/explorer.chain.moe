@@ -32,6 +32,9 @@ export default function AccountPage({
   const { account } = useEosIoChainGetAccount(accountName)
   const { balance } = useEosIoChainGetBalance(accountName)
   const { actions, isError } = useEosIoChainGetActions(accountName)
+  const balanceFix = account?.core_liquid_balance
+    ? account.core_liquid_balance
+    : balance
 
   const columns: ColumnDef<IEosIoChainGetActionsAction>[] = [
     {
@@ -130,7 +133,7 @@ export default function AccountPage({
               <TableRow>
                 <TableHead>BALANCE </TableHead>
                 <TableCell>
-                  {formatNumber(parseFloat(balance || "0"), 4)}{" "}
+                  {formatNumber(parseFloat(balanceFix || "0"), 4)}{" "}
                   {currentChain.symbol}
                 </TableCell>
                 <TableHead>RAM </TableHead>

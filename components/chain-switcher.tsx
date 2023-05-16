@@ -93,7 +93,7 @@ export default function ChainSwitcher({ className }: ChainSwitcherProps) {
                       <AvatarImage src={chain.logo} alt={chain.name} />
                       <AvatarFallback></AvatarFallback>
                     </Avatar>
-                    <span className="w-12 font-medium">{chain.name}</span>
+                    <span className="w-14 font-medium">{chain.name}</span>
                     <span className="ml-2 text-sm text-muted-foreground">
                       {
                         {
