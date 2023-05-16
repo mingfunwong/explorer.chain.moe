@@ -57,16 +57,16 @@ export function MobileNav() {
       <SheetContent size="xl" position="left" className="pr-0">
         <MobileLink
           href="/"
-          className="flex items-center"
+          className="mb-6 ml-16 flex items-center"
           onOpenChange={setOpen}
         >
           <Icons.logo className="mr-2" />
           <span className="font-bold">{siteConfig.name}</span>
         </MobileLink>
 
-        <ChainSwitcher />
+        <ChainSwitcher className="my-2 ml-2" />
 
-        <div className="ml-4 mt-2">
+        <div className="ml-4 mr-8 mt-2 pb-2">
           <CommandMenu />
         </div>
 
