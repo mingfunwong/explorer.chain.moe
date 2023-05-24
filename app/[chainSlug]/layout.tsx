@@ -1,6 +1,8 @@
 "use client"
 
 import "@/styles/globals.css"
+import Script from "next/script"
+
 import { defultChain } from "@/config/chains"
 import { siteConfig } from "@/config/site"
 import { fontSans } from "@/lib/fonts"
@@ -40,6 +42,24 @@ export default function RootLayout({ children }: RootLayoutProps) {
               <SiteFooter />
             </div>
           </ThemeProvider>
+
+          <Script
+            id="google-analytics-script1"
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-VH918P1NJQ"
+          ></Script>
+          <Script
+            id="google-analytics-script2"
+            dangerouslySetInnerHTML={{
+              __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-VH918P1NJQ');
+        `,
+            }}
+          />
         </body>
       </html>
     </>
