@@ -2,6 +2,7 @@
 
 import "@/styles/globals.css"
 import Script from "next/script"
+import { Analytics } from "@vercel/analytics/react"
 
 import { defultChain } from "@/config/chains"
 import { siteConfig } from "@/config/site"
@@ -42,6 +43,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
               <SiteFooter />
             </div>
           </ThemeProvider>
+
+          <Analytics />
 
           <Script
             id="google-analytics-script1"
