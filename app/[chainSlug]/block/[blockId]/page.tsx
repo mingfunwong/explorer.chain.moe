@@ -23,6 +23,8 @@ type IEosIoChainGetBlockActionWithId = IEosIoChainGetBlockAction & {
   id: string
 }
 
+export const runtime = "edge"
+
 export default function BlockPage({ params }: { params: { blockId: string } }) {
   const currentChain = useCurrentChian() || defultChain
   const blockId = params.blockId

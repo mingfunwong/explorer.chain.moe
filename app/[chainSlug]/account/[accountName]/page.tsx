@@ -22,6 +22,8 @@ import {
   TableRow,
 } from "@/components/ui/table"
 
+export const runtime = "edge"
+
 export default function AccountPage({
   params,
 }: {

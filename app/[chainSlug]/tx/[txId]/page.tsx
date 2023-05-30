@@ -19,6 +19,8 @@ import {
   TableRow,
 } from "@/components/ui/table"
 
+export const runtime = "edge"
+
 export default function TxPage({ params }: { params: { txId: string } }) {
   const currentChain = useCurrentChian() || defultChain
   const txId = params.txId

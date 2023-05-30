@@ -11,6 +11,8 @@ import { useProducers } from "@/hooks/useProducers"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { DataTable } from "@/components/ui/data-table"
 
+export const runtime = "edge"
+
 export default function ProducersPage() {
   const currentChain = useCurrentChian() || defultChain
   const { bpList } = useProducers()

@@ -23,6 +23,8 @@ export type LatestBlocksColumn = {
   producer: string
 }
 
+export const runtime = "edge"
+
 export type LatestTransactionsColumn = {
   hash: string
   account: string

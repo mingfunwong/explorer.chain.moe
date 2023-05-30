@@ -59,6 +59,7 @@
     "tailwindcss-animate": "^1.0.5"
   },
   "devDependencies": {
+    "@cloudflare/next-on-pages": "^1.0.1",
     "@ianvs/prettier-plugin-sort-imports": "^3.7.1",
     "@types/node": "^20.1.7",
     "@types/react": "^18.0.22",

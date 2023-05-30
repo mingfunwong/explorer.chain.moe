@@ -18,6 +18,8 @@ interface RootLayoutProps {
   children: React.ReactNode
 }
 
+export const runtime = "edge"
+
 export default function RootLayout({ children }: RootLayoutProps) {
   const currentChain = useCurrentChian() || defultChain
 
