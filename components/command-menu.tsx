@@ -4,7 +4,7 @@ import * as React from "react"
 import { useCallback, useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
 import { DialogProps } from "@radix-ui/react-alert-dialog"
-import { Laptop, Moon, SunMedium } from "lucide-react"
+import { Laptop, Moon, Search, SunMedium } from "lucide-react"
 import { useTheme } from "next-themes"
 
 import { defultChain } from "@/config/chains"
@@ -64,15 +64,15 @@ export function CommandMenu({ ...props }: DialogProps) {
       <Button
         variant="outline"
         className={cn(
-          "relative h-9 w-full justify-start rounded-[0.5rem] text-sm text-muted-foreground md:w-64 "
+          "relative h-9 w-full justify-start rounded-[0.5rem] border-0 px-1 text-sm text-muted-foreground md:w-64 md:px-2"
         )}
         onClick={() => setOpen(true)}
         {...props}
       >
-        <span className="inline-flex">Account / Block / TX</span>
-        <kbd className="pointer-events-none absolute right-1.5 top-2 hidden h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium opacity-100 sm:flex">
-          <span className="text-xs">⌘</span>K
-        </kbd>
+        <span className="inline-flex items-center">
+          <Search className="mr-2 h-4 w-4" />
+          <span>Account / Block / TX</span>
+        </span>
       </Button>
       <CommandDialog open={open} onOpenChange={setOpen}>
         <CommandInput

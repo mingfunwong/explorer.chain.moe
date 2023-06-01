@@ -31,9 +31,11 @@ export default function BlockPage({ params }: { params: { blockId: string } }) {
   const { block, isError } = useEosIoChainGetBlock(blockId)
   const actions: IEosIoChainGetBlockActionWithId[] = []
   block?.transactions.forEach((tx) => {
-    actions.push(
-      ...tx.trx.transaction.actions.map((act) => ({ id: tx.trx.id, ...act }))
-    )
+    if (tx.trx.transaction) {
+      actions.push(
+        ...tx.trx.transaction.actions.map((act) => ({ id: tx.trx.id, ...act }))
+      )
+    }
   })
   const columns: ColumnDef<IEosIoChainGetBlockActionWithId>[] = [
     {
