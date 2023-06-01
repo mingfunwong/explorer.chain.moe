@@ -100,45 +100,43 @@ export default function DashboardPage() {
         </span>
       </div>
 
-      <div className="overflow-auto rounded-lg border bg-card px-6 pb-6 text-card-foreground shadow-sm">
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-          <Card>
-            <CardHeader className="flex flex-row items-center space-y-0 pb-2">
-              <CardTitle className="text-sm font-medium">Block</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div ref={countUpRef} className="text-2xl font-bold"></div>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardHeader className="flex flex-row items-center space-y-0 pb-2">
-              <CardTitle className="text-sm font-medium">Producer</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-bold">
-                {info?.head_block_producer || "-"}
-              </div>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardHeader className="flex flex-row items-center space-y-0 pb-2">
-              <CardTitle className="text-sm font-medium">RAM Price</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-bold">
-                {ramMarketString} {currentChain.symbol} / MB
-              </div>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardHeader className="flex flex-row items-center space-y-0 pb-2">
-              <CardTitle className="text-sm font-medium">RAM Used</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-bold">{ramUsed} GB</div>
-            </CardContent>
-          </Card>
-        </div>
+      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+        <Card>
+          <CardHeader className="flex flex-row items-center space-y-0 pb-2">
+            <CardTitle className="text-sm font-medium">Block</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div ref={countUpRef} className="text-2xl font-bold"></div>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader className="flex flex-row items-center space-y-0 pb-2">
+            <CardTitle className="text-sm font-medium">Producer</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold">
+              {info?.head_block_producer || "-"}
+            </div>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader className="flex flex-row items-center space-y-0 pb-2">
+            <CardTitle className="text-sm font-medium">RAM Price</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold">
+              {ramMarketString} {currentChain.symbol} / MB
+            </div>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader className="flex flex-row items-center space-y-0 pb-2">
+            <CardTitle className="text-sm font-medium">RAM Used</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold">{ramUsed} GB</div>
+          </CardContent>
+        </Card>
       </div>
 
       <div className="grid gap-12 lg:grid-cols-8">
