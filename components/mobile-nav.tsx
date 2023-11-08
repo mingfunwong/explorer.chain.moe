@@ -54,7 +54,7 @@ export function MobileNav() {
           </Button>
         </div>
       </SheetTrigger>
-      <SheetContent size="xl" position="left" className="pr-0">
+      <SheetContent side="left" className="pr-0">
         <MobileLink
           href="/"
           className="mb-6 ml-16 flex items-center"
