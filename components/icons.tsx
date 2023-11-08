@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { Moon, SunMedium, type Icon as LucideIcon } from "lucide-react"
+import { Moon, SunMedium, type LucideIcon } from "lucide-react"
 
 export type Icon = LucideIcon
 
