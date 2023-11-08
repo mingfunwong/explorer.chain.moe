@@ -7,7 +7,7 @@ import { chians } from "@/config/chains"
 
 const slugMap = new Map<string, Chain>()
 export const useCurrentChian = () => {
-  const { chainSlug } = useParams()
+  const { chainSlug }: { chainSlug: string } = useParams()
   if (!slugMap.size) {
     chians.forEach((chain) => {
       chain.bindPath.forEach((path) => {
