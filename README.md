@@ -20,13 +20,13 @@ https://explorer.chain.moe/
 ```
 git clone https://github.com/chain-moe/explorer.chain.moe.git
 cd explorer.chain.moe
-yarn
+npm install
 ```
 
 ## Run
 
 ```
-yarn dev
+npm run dev
 ```
 
 ## License

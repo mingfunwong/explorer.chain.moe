@@ -12,6 +12,7 @@ import { SiteFooter } from "@/components/site-footer"
 import { SiteHeader } from "@/components/site-header"
 import { ThemeProvider } from "@/components/theme-provider"
 import { TopLoader } from "@/components/top-loader"
+import { Analytics } from "@vercel/analytics/react"
 
 interface RootLayoutProps {
   children: React.ReactNode
@@ -45,6 +46,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             </div>
           </ThemeProvider>
 
+          <Analytics/>
           <Script
             id="google-analytics-script1"
             async
