@@ -13,6 +13,7 @@ import { SiteHeader } from "@/components/site-header"
 import { ThemeProvider } from "@/components/theme-provider"
 import { TopLoader } from "@/components/top-loader"
 import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 interface RootLayoutProps {
   children: React.ReactNode
@@ -47,6 +48,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
           </ThemeProvider>
 
           <Analytics/>
+          <SpeedInsights/>
+          
           <Script
             id="google-analytics-script1"
             async
